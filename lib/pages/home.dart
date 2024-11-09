@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek/pages/continuing.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -164,14 +165,19 @@ class _HomeState extends State<Home> {
                             SizedBox(
                               height: 5,
                             ),
-                            Container(
-                              padding: EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.white54),
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Icon(
-                                Icons.play_arrow,
-                                color: Colors.white,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> Continuing()));
+                              },
+                              child: Container(
+                                padding: EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.white54),
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Icon(
+                                  Icons.play_arrow,
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
                             SizedBox(
